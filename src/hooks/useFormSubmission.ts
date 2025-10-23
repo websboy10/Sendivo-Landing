@@ -60,7 +60,7 @@ export const useFormSubmission = () => {
         .from('Virksomhed')
         .insert([
           {
-            'Firmanavn': formData.company_name,
+            'Firma navn': formData.company_name,
             'Kontakt person': formData.contact_person,
             'Email': formData.email,
             'Telefon': formData.phone || null,

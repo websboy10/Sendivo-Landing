@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS "Klubber" (
 -- Create table for business form submissions
 CREATE TABLE IF NOT EXISTS "Virksomhed" (
   id SERIAL PRIMARY KEY,
-  "Firmanavn" TEXT NOT NULL,
+  "Firma navn" TEXT NOT NULL,
   "Kontakt person" TEXT NOT NULL,
   "Email" TEXT NOT NULL,
   "Telefon" TEXT,
