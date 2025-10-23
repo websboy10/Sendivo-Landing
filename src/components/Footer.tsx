@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a1f2e] border-t border-white/10 mt-20">
-      <div className="max-w-7xl mx-auto px-8 md:px-16 py-24 md:py-32">
+    <footer className="bg-[#0a1f2e] border-t border-white/10 mt-12 md:mt-16 lg:mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 py-12 md:py-20 lg:py-24">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16 gap-x-32 items-start justify-items-center mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-20 items-start justify-items-start md:justify-items-center mx-auto">
           {/* Brand Section */}
-          <div className="text-left">
-            <h3 className="font-serif-display text-white text-3xl mb-8">SENDIVO</h3>
+          <div className="text-left w-full">
+            <h3 className="font-serif-display text-white text-2xl md:text-3xl mb-6 md:mb-8">SENDIVO</h3>
             
             {/* Social Links */}
             <div className="flex gap-6">
@@ -93,13 +93,13 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-10 mt-20 border-t border-white/8">
+        <div className="pt-8 mt-12 md:pt-10 md:mt-16 lg:mt-20 border-t border-white/8">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-center">
-            <p className="text-[#B7BDC6] text-sm">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-4 text-center">
+            <p className="text-[#B7BDC6] text-xs md:text-sm">
               © {new Date().getFullYear()} Sendivo. Alle rettigheder forbeholdes.
             </p>
-            <div className="flex gap-8 text-sm">
+            <div className="flex gap-4 md:gap-8 text-xs md:text-sm">
               <Link 
                 to="/privatlivspolitik" 
                 onClick={() => {

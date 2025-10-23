@@ -20,9 +20,9 @@ export function AboutSection({
   imageAlt 
 }: AboutSectionProps) {
   return (
-    <section className="bg-[#0a1f2e] py-20 md:py-28" data-index={reverse ? "3" : "1"}>
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className={`grid md:grid-cols-2 gap-16 items-center ${reverse ? 'md:grid-flow-dense' : ''}`}>
+    <section className="bg-[#0a1f2e] py-16 md:py-20 lg:py-28" data-index={reverse ? "3" : "1"}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className={`grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center ${reverse ? 'md:grid-flow-dense' : ''}`}>
           {/* Text Content */}
           <div className={`space-y-8 ${reverse ? 'md:col-start-1' : ''}`}>
             <div className="flex items-center gap-6">
@@ -32,11 +32,11 @@ export function AboutSection({
               </span>
             </div>
 
-            <h2 className="font-serif-display text-white text-4xl md:text-5xl leading-[1.2]">
+            <h2 className="font-serif-display text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.2]">
               {title}
             </h2>
 
-            <p className="text-gray-400 text-lg leading-relaxed">
+            <p className="text-gray-400 text-base md:text-lg leading-relaxed">
               {description}
             </p>
 

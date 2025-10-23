@@ -36,9 +36,9 @@ export function Hero() {
           <div className="absolute -right-16 top-1/2 -translate-y-1/2 w-12 h-[1px] eyebrow-line hidden sm:block" />
         </div>
         
-        <h1 className="font-serif-display text-white mb-8 text-5xl md:text-6xl lg:text-7xl leading-[1.2]">
-          Professionel klubkommunikation.<br />
-          Fællesskab
+        <h1 className="font-serif-display text-white mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.2] px-4">
+          Professionel klubkommunikation.<br className="hidden sm:block" />
+          <span className="sm:inline"> </span>Fællesskab
         </h1>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
