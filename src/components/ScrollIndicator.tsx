@@ -61,7 +61,7 @@ export function ScrollIndicator() {
   }, []);
 
   return (
-    <div className="scroll-indicator">
+    <div className="scroll-indicator hidden lg:flex">
       <span 
         ref={(el) => (indicatorsRef.current[0] = el)}
         data-section="0"
