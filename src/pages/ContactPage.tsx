@@ -159,10 +159,10 @@ export function ContactPage() {
             </div>
 
             {/* Business Contact Form - Now on the right */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <div className="mb-8">
-                <h2 className="font-serif-display text-white text-2xl mb-4">For Virksomheder</h2>
-                <p className="text-gray-400">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10">
+              <div className="mb-6 md:mb-8">
+                <h2 className="font-serif-display text-white text-xl md:text-2xl mb-3 md:mb-4">For Virksomheder</h2>
+                <p className="text-gray-400 text-sm md:text-base">
                   Ønsker I at nå aktive danskere gennem vores sportsklub-netværk? 
                   Udfyld formularen, så vender vi tilbage til jer.
                 </p>
