@@ -1,0 +1,320 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Typography */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 200 60% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 200 50% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 200 60% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 45 85% 45%;
+    --primary-foreground: 200 60% 10%;
+
+    --secondary: 180 50% 40%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 200 40% 25%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 45 85% 45%;
+    --accent-foreground: 200 60% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 30% 20%;
+    --input: 200 30% 20%;
+    --ring: 45 85% 45%;
+
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif-display;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  /* H1 specific underline styling - centered with smooth animation */
+  h1 {
+    @apply relative inline-block;
+    text-align: center;
+  }
+
+
+  /* H2 specific underline styling - left aligned with smooth animation */
+  h2 {
+    @apply relative inline-block;
+    text-align: left;
+  }
+
+
+  p {
+    line-height: 1.7;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  .text-eyebrow {
+    @apply uppercase;
+    color: #E3B343;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-shadow:
+      0 0 6px rgba(227, 179, 67, 0.4),   /* indre glød */
+      0 0 12px rgba(227, 179, 67, 0.25), /* ydre glød */
+      0 0 24px rgba(227, 179, 67, 0.15); /* blød udtoning */
+  }
+
+  .text-eyebrow-subtle {
+    @apply uppercase;
+    color: #E3B343;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-shadow:
+      0 0 3px rgba(227, 179, 67, 0.2),   /* indre glød */
+      0 0 6px rgba(227, 179, 67, 0.15),  /* ydre glød */
+      0 0 12px rgba(227, 179, 67, 0.1);  /* blød udtoning */
+  }
+
+  .eyebrow-line {
+    background: #E3B343;
+    box-shadow:
+      0 0 6px rgba(227, 179, 67, 0.4),   /* indre glød */
+      0 0 12px rgba(227, 179, 67, 0.25), /* ydre glød */
+      0 0 24px rgba(227, 179, 67, 0.15); /* blød udtoning */
+  }
+
+  .sendivo-button {
+    @apply inline-flex items-center gap-3 px-6 py-2 rounded-sm font-serif-display transition-all duration-200 hover:transform hover:-translate-y-0.5 border;
+    background: #CFA43A;
+    color: #0F1B2B;
+    border-color: #D8C28E;
+    box-shadow: 0 0 8px rgba(212, 165, 58, 0.15), 0 0 16px rgba(184, 134, 11, 0.1);
+  }
+
+  .sendivo-button:hover {
+    background: #E3B343;
+    transform: translateY(-1px);
+    box-shadow: 0 0 12px rgba(227, 179, 67, 0.2), 0 0 20px rgba(207, 164, 58, 0.15);
+  }
+
+  .feature-icon {
+    filter: drop-shadow(0 0 6px rgba(227, 179, 67, 0.4)) drop-shadow(0 0 12px rgba(227, 179, 67, 0.25)) drop-shadow(0 0 24px rgba(227, 179, 67, 0.15));
+  }
+
+  .feature-card {
+    border-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(227, 179, 67, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    gap: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  .contact-card {
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 90%;
+    max-width: 800px;
+    background: linear-gradient(145deg, #101b2b, #0d1a24);
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0 0 25px rgba(227, 179, 67, 0.15));
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .contact-card {
+      padding: 3rem 2rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .contact-card {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      transform: none;
+      margin: 2rem auto;
+      width: 95%;
+    }
+  }
+
+  .contact-card-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center gap-3 px-6 py-3 rounded-sm font-serif-display transition-all duration-200 hover:transform hover:-translate-y-0.5 border;
+    background: transparent;
+    color: #E3B343;
+    border-color: #E3B343;
+    text-shadow: 0 0 6px rgba(227, 179, 67, 0.3);
+  }
+
+  .secondary-button:hover {
+    background: rgba(227, 179, 67, 0.1);
+    color: #E3B343;
+    border-color: #E3B343;
+    text-shadow: 0 0 8px rgba(227, 179, 67, 0.5);
+    box-shadow: 0 0 15px rgba(227, 179, 67, 0.2);
+  }
+
+  .font-serif-display {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+
+  .animated-underline {
+    @apply relative inline-block pb-3;
+  }
+
+  .animated-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-[3px] w-24;
+    background: linear-gradient(90deg, #E3B343, #CFA43A);
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Responsive width for different screen sizes */
+  @media (min-width: 768px) {
+    .animated-underline::after {
+      @apply w-32;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .animated-underline::after {
+      @apply w-40;
+    }
+  }
+}
+
+/* Navigation active states */
+.nav-active {
+  color: #E3B343;
+  font-weight: 600;
+  text-shadow:
+    0 0 6px rgba(227, 179, 67, 0.4),
+    0 0 12px rgba(227, 179, 67, 0.25),
+    0 0 24px rgba(227, 179, 67, 0.15);
+}
+
+.nav-active-line {
+  width: 100%;
+  background: linear-gradient(90deg, #E3B343, #CFA43A, #E3B343);
+  box-shadow:
+    0 0 6px rgba(227, 179, 67, 0.4),
+    0 0 12px rgba(227, 179, 67, 0.25),
+    0 0 24px rgba(227, 179, 67, 0.15);
+}
+
+.nav-active-button {
+  ring: 2px solid rgba(227, 179, 67, 0.5);
+  box-shadow:
+    0 0 8px rgba(227, 179, 67, 0.3),
+    0 0 16px rgba(227, 179, 67, 0.15),
+    inset 0 0 0 1px rgba(227, 179, 67, 0.2);
+}
+
+/* Improved text rendering */
+.smooth-text {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+}
+
+.scroll-indicator span {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.scroll-indicator span.active {
+  color: #E3B343;
+  background: rgba(227, 179, 67, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(227, 179, 67, 0.25);
+  font-weight: 600;
+  text-shadow:
+    0 0 6px rgba(227, 179, 67, 0.4),   /* indre glød */
+    0 0 12px rgba(227, 179, 67, 0.25), /* ydre glød */
+    0 0 24px rgba(227, 179, 67, 0.15); /* blød udtoning */
+}
+
+.scroll-indicator span:hover {
+  color: rgba(255, 255, 255, 0.8);
+}

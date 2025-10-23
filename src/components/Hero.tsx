@@ -1,0 +1,68 @@
+import { Instagram, Facebook, Linkedin } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Link } from "react-router-dom";
+
+export function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" data-index="0">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <ImageWithFallback
+          src="/Padel-hero-bg.jpg"
+          alt="Padel player with Bullpadel racket on court"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-slate-900/80" />
+      </div>
+
+      {/* Follow Us - Left Side */}
+      <div className="hidden lg:flex absolute left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-6 z-20">
+        <div className="text-white/80 text-sm tracking-wider [writing-mode:vertical-lr] rotate-180">
+          Følg os
+        </div>
+        <Instagram className="w-5 h-5 text-white/60 hover:text-white cursor-pointer transition-colors" />
+        <Facebook className="w-5 h-5 text-white/60 hover:text-white cursor-pointer transition-colors" />
+        <Linkedin className="w-5 h-5 text-white/60 hover:text-white cursor-pointer transition-colors" />
+      </div>
+
+
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 text-center pt-24">
+        <div className="inline-block mb-6 relative">
+          <div className="absolute -left-16 top-1/2 -translate-y-1/2 w-12 h-[1px] eyebrow-line hidden sm:block" />
+          <p className="text-eyebrow">
+            FREMTIDEN FOR KLUBKOMMUNIKATION
+          </p>
+          <div className="absolute -right-16 top-1/2 -translate-y-1/2 w-12 h-[1px] eyebrow-line hidden sm:block" />
+        </div>
+        
+        <h1 className="font-serif-display text-white mb-8 text-5xl md:text-6xl lg:text-7xl leading-[1.2]">
+          Professionel klubkommunikation.<br />
+          Fællesskab
+        </h1>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Link 
+            to="/kontakt" 
+            onClick={() => {
+              setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }, 100);
+            }}
+            className="sendivo-button text-lg"
+          >
+            <span className="tracking-wide">Kontakt</span>
+          </Link>
+          
+          <Link 
+            to="/om-os" 
+            className="sendivo-button text-lg"
+          >
+            <span className="tracking-wide">Om os</span>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
