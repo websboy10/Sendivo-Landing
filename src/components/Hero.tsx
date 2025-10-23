@@ -1,4 +1,3 @@
-import { Instagram, Facebook, Linkedin } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Link } from "react-router-dom";
 
@@ -15,17 +14,6 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-slate-900/80" />
       </div>
 
-      {/* Follow Us - Left Side */}
-      <div className="hidden lg:flex absolute left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-6 z-20">
-        <div className="text-white/80 text-sm tracking-wider [writing-mode:vertical-lr] rotate-180">
-          Følg os
-        </div>
-        <Instagram className="w-5 h-5 text-white/60 hover:text-white cursor-pointer transition-colors" />
-        <Facebook className="w-5 h-5 text-white/60 hover:text-white cursor-pointer transition-colors" />
-        <Linkedin className="w-5 h-5 text-white/60 hover:text-white cursor-pointer transition-colors" />
-      </div>
-
-
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 text-center pt-24">
         <div className="inline-block mb-6 relative">
@@ -37,8 +25,8 @@ export function Hero() {
         </div>
         
         <h1 className="font-serif-display text-white mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.2] px-4">
-          Professionel klubkommunikation.<br className="hidden sm:block" />
-          <span className="sm:inline"> </span>Fællesskab
+          Fra klub til fællesskab —<br className="hidden sm:block" />
+          <span className="sm:inline"> </span>kommunikation der forbinder.
         </h1>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -10,31 +10,6 @@ export function Footer() {
           {/* Brand Section */}
           <div className="text-left w-full">
             <h3 className="font-serif-display text-white text-2xl md:text-3xl mb-6 md:mb-8">SENDIVO</h3>
-            
-            {/* Social Links */}
-            <div className="flex gap-6">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full flex items-center justify-center border border-white/10 hover:border-[#E3B343] hover:text-[#E3B343] transition-all duration-300"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full flex items-center justify-center border border-white/10 hover:border-[#E3B343] hover:text-[#E3B343] transition-all duration-300"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full flex items-center justify-center border border-white/10 hover:border-[#E3B343] hover:text-[#E3B343] transition-all duration-300"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Navigation */}
