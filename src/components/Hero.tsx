@@ -25,7 +25,7 @@ export function Hero() {
         </div>
         
         <h1 className="font-serif-display text-white mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.2] px-4">
-          Fra klub til fællesskab —<br className="hidden sm:block" />
+          Fra klub til fællesskab<br className="hidden sm:block" />
           <span className="sm:inline"> </span>kommunikation der forbinder.
         </h1>
         
