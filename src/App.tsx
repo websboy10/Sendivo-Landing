@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import { ScrollIndicator } from "@/components/ScrollIndicator";
 import { HeadingObserver } from "@/components/HeadingObserver";
 import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const AppContent = () => {
   
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/om-os" element={<AboutPage />} />
