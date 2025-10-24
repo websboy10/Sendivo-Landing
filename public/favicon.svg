@@ -1,3 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Playfair Display Fallback';
+        src: local('Playfair Display');
+      }
+    </style>
+  </defs>
+  <rect width="256" height="256" fill="none"/>
+  <text x="50%" y="66%" text-anchor="middle" dominant-baseline="middle"
+        font-family="'Playfair Display', 'Playfair Display Fallback', serif"
+        font-size="220" font-weight="700" fill="#FFFFFF">
+    S
+  </text>
+</svg>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <rect width="100" height="100" fill="#0F1B2B"/>
   <text 
